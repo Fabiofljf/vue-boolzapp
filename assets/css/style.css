@@ -10,16 +10,31 @@ img {
     max-width: 100%;
 }
 
+i {
+    color: var(--c_icons);
+}
+
 
 /* UTILITY */
 
 :root {
     --bg_desktopUp: #009688;
     --bg_desktopDown: #DBDBD3;
+    --bg_columnUp: #EAEAEA;
+    --bg_columnUpSx: #8EDAFC;
+    --bg_columnDonwSx: white;
+    --c_icons: #B1B1B1;
+}
+
+.fs_10 {
+    font-size: 10px;
 }
 
 
 /* MAIN */
+
+
+/* Desktop */
 
 #desktopUp {
     background-color: var(--bg_desktopUp);
@@ -31,7 +46,10 @@ img {
     height: calc(100vh - 150px);
 }
 
-#application {
+
+/* Application size */
+
+.application {
     width: 1440px;
     height: 90vh;
     position: absolute;
@@ -39,5 +57,57 @@ img {
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
-    background-color: red;
 }
+
+.row {
+    height: 100%;
+    --bs-gutter-x: 0rem;
+}
+
+.columnUp {
+    height: 70px;
+    background-color: var(--bg_columnUp);
+}
+
+.columnDown {
+    height: calc(100% - 70px);
+}
+
+.columnUpSx {
+    height: 80px;
+    background-color: var(--bg_columnUpSx);
+}
+
+.columnDonwSx {
+    height: calc(100% - 80px);
+    background-color: var(--bg_columnDonwSx);
+}
+
+.columnUpDx {
+    height: calc(100% - 70px);
+    background-image: url('../img/mine.jpg');
+}
+
+.columnDonwDx {
+    height: 70px;
+    background-color: var(--bg_columnDonwSx);
+}
+
+
+/* Working in first row, column up sx - avatar and icons */
+
+.card-avatar {
+    width: 70px;
+    padding: 10px;
+}
+
+.card-avatar>img {
+    border-radius: 50%;
+}
+
+.col>i {
+    padding: 10px;
+}
+
+
+/* Working in first row, column up dx - avatar to messagge and icons */
