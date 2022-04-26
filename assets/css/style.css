@@ -25,6 +25,8 @@ i {
     --bg_columnDonwSx: white;
     --bg_columnDownDx: #F3EEEA;
     --bg_col-search: #FAFAFA;
+    --bg_messagge: #D5F9BA;
+    --bg_response: white;
     --c_icons: #B1B1B1;
 }
 
@@ -158,7 +160,22 @@ input {
 }
 
 
-/* Working on second row, column Down sx - write messagge */
+/* Working on second row, column Up dx - conversation */
+
+.messagge {
+    background-color: var(--bg_messagge);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.response {
+    background-color: var(--bg_response);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+/* Working on second row, column Down dx - write messagge */
 
 .columnDonwDx {
     background-color: var(--bg_columnDownDx);
