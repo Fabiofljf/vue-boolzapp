@@ -1,7 +1,7 @@
 const app = new Vue({
     el: '#app',
-    selectContact: '',
     data: {
+        selectDate: '',
         i: 0,
         contacts: [{
                 name: 'Michele',
@@ -162,6 +162,12 @@ const app = new Vue({
         getNewIndexAndConversation(index) {
             //console.log('ciao');
             this.i = index;
+        },
+        gethours(i) {
+            const hours = new Date("July 21, 1983 01:15:00")
+            let hour = hours.getHours()
+            hour = selectDate
+
         }
     }
 })
