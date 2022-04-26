@@ -98,7 +98,7 @@
                             </div>
                             <!-- /.columnDown - col-center sx -->
                             <div class="columnDonwSx overflow-auto">
-                                <div class="col d-flex border-bottom" v-for='(contact, index) in contacts' @click="getNewIndexandConversation(index)">
+                                <div class="col d-flex border-bottom" v-for='(contact, index) in contacts' @click="getNewIndexAndConversation(index)">
                                     <div class="col-2 card-avatar d-flex">
                                         <img :src="'./assets/img/avatar' + contact.avatar + '.jpg'" alt="User principale">
                                     </div>
@@ -115,8 +115,8 @@
 
                         <div class="col">
                             <div class="columnUpDx overflow-auto">
-                                <div class="container" id="conversationUser">
-                                    <div class="row d-flex flex-column">
+                                <div class="container">
+                                    <div class="row d-flex flex-column" id="conversationUser">
                                         <div class="col px-5 py-2" v-for='message in contacts[index].messages'>
                                             <div class="w_250" :class="message.status == 'sent' ? 'message' : 'response' ">{{message.message}}</div>
                                         </div>
