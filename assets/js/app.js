@@ -1,7 +1,8 @@
 const app = new Vue({
     el: '#app',
+    selectContact: '',
     data: {
-        index: 0,
+        i: 0,
         contacts: [{
                 name: 'Michele',
                 avatar: '_1',
@@ -160,7 +161,7 @@ const app = new Vue({
     methods: {
         getNewIndexAndConversation(index) {
             //console.log('ciao');
-            this.index = index;
+            this.i = index;
         }
     }
 })

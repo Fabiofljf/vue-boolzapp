@@ -50,10 +50,10 @@
                         <div class="col d-flex">
                             <div class="col d-flex">
                                 <div class="col-2 card-avatar d-flex">
-                                    <img src="./assets/img/avatar_1.jpg" alt="User principale">
+                                    <img :src="`./assets/img/avatar${contacts[i].avatar}.jpg`" alt="User principale">
                                 </div>
                                 <div class="col d-flex flex-column justify-content-center align-items-start">
-                                    <h6 class="d-flex align-items-center p-1 m-0">Michele</h6>
+                                    <h6 class="d-flex align-items-center p-1 m-0">{{contacts[i].name}}</h6>
                                     <p class="fs_10 m-0">Ultimo accesso alle ore</p>
                                 </div>
                                 <!-- /.card-avatar-->
@@ -117,7 +117,7 @@
                             <div class="columnUpDx overflow-auto">
                                 <div class="container">
                                     <div class="row d-flex flex-column" id="conversationUser">
-                                        <div class="col px-5 py-2" v-for='message in contacts[index].messages'>
+                                        <div class="col px-5 py-2" v-for='message in contacts[i].messages'>
                                             <div class="w_250" :class="message.status == 'sent' ? 'message' : 'response' ">{{message.message}}</div>
                                         </div>
                                     </div>
