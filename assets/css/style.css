@@ -30,6 +30,14 @@ i {
     font-size: 10px;
 }
 
+.fs_12 {
+    font-size: 12px;
+}
+
+.h_100 {
+    height: 100%;
+}
+
 
 /* MAIN */
 
@@ -110,4 +118,12 @@ i {
 }
 
 
-/* Working in first row, column up dx - avatar to messagge and icons */
+/* Working on second row, column up sx - bell incon */
+
+.bell {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.721);
+    padding: 15px;
+}
