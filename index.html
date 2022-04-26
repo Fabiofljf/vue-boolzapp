@@ -27,6 +27,7 @@
             <div id="desktopDown"></div>
             <div class="application">
                 <div class="row flex-column">
+
                     <div class="columnUp d-flex">
                         <div class="col-5 d-flex border-end border-grey">
                             <div class="col">
@@ -97,76 +98,15 @@
                             </div>
                             <!-- /.columnDown - col-center sx -->
                             <div class="columnDonwSx overflow-auto">
-                                <div class="col d-flex border-bottom">
+                                <div class="col d-flex border-bottom" v-for='(name, index) in contacts'>
                                     <div class="col-2 card-avatar d-flex">
-                                        <img src="./assets/img/avatar_1.jpg" alt="User principale">
+                                        <img :src="'./assets/img/avatar' + contacts[index].avatar + '.jpg'" alt="User principale">
                                     </div>
                                     <div class="col d-flex flex-column justify-content-center align-items-start">
-                                        <h6 class="d-flex align-items-center p-1 m-0">Michele</h6>
-                                        <p class="fs_12 m-0 ms-1">Ultimo messaggio inviato</p>
+                                        <h6 class="d-flex align-items-center p-1 m-0">{{contacts[index].name}}</h6>
+                                        <p class="fs_12 m-0 ms-1 c_grey">Ultimo messaggio inviato</p>
                                     </div>
                                 </div>
-                                <!-- /.Avatar User-->
-                                <div class="col d-flex border-bottom">
-                                    <div class="col-2 card-avatar d-flex">
-                                        <img src="./assets/img/avatar_1.jpg" alt="User principale">
-                                    </div>
-                                    <div class="col d-flex flex-column justify-content-center align-items-start">
-                                        <h6 class="d-flex align-items-center p-1 m-0">Michele</h6>
-                                        <p class="fs_12 m-0 ms-1">Ultimo messaggio inviato</p>
-                                    </div>
-                                </div>
-                                <!-- /.Avatar User-->
-                                <div class="col d-flex border-bottom">
-                                    <div class="col-2 card-avatar d-flex">
-                                        <img src="./assets/img/avatar_1.jpg" alt="User principale">
-                                    </div>
-                                    <div class="col d-flex flex-column justify-content-center align-items-start">
-                                        <h6 class="d-flex align-items-center p-1 m-0">Michele</h6>
-                                        <p class="fs_12 m-0 ms-1">Ultimo messaggio inviato</p>
-                                    </div>
-                                </div>
-                                <!-- /.Avatar User-->
-                                <div class="col d-flex border-bottom">
-                                    <div class="col-2 card-avatar d-flex">
-                                        <img src="./assets/img/avatar_1.jpg" alt="User principale">
-                                    </div>
-                                    <div class="col d-flex flex-column justify-content-center align-items-start">
-                                        <h6 class="d-flex align-items-center p-1 m-0">Michele</h6>
-                                        <p class="fs_12 m-0 ms-1">Ultimo messaggio inviato</p>
-                                    </div>
-                                </div>
-                                <!-- /.Avatar User-->
-                                <div class="col d-flex border-bottom">
-                                    <div class="col-2 card-avatar d-flex">
-                                        <img src="./assets/img/avatar_1.jpg" alt="User principale">
-                                    </div>
-                                    <div class="col d-flex flex-column justify-content-center align-items-start">
-                                        <h6 class="d-flex align-items-center p-1 m-0">Michele</h6>
-                                        <p class="fs_12 m-0 ms-1">Ultimo messaggio inviato</p>
-                                    </div>
-                                </div>
-                                <!-- /.Avatar User-->
-                                <div class="col d-flex border-bottom">
-                                    <div class="col-2 card-avatar d-flex">
-                                        <img src="./assets/img/avatar_1.jpg" alt="User principale">
-                                    </div>
-                                    <div class="col d-flex flex-column justify-content-center align-items-start">
-                                        <h6 class="d-flex align-items-center p-1 m-0">Michele</h6>
-                                        <p class="fs_12 m-0 ms-1">Ultimo messaggio inviato</p>
-                                    </div>
-                                </div>
-                                <!-- /.Avatar User-->
-                                <div class="col d-flex border-bottom">
-                                    <div class="col-2 card-avatar d-flex">
-                                        <img src="./assets/img/avatar_1.jpg" alt="User principale">
-                                    </div>
-                                    <div class="col d-flex flex-column justify-content-center align-items-start">
-                                        <h6 class="d-flex align-items-center p-1 m-0">Michele</h6>
-                                        <p class="fs_12 m-0 ms-1">Ultimo messaggio inviato</p>
-                                    </div>
-                                </div>
-                                <!-- /.Avatar User-->
 
                             </div>
                             <!-- /.columnDown - col-down sx -->
@@ -207,6 +147,7 @@
                         <!-- /.columnDown - col dx -->
                     </div>
                     <!-- /.columnDown -->
+
                 </div>
             </div>
         </main>

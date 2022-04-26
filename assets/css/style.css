@@ -30,6 +30,10 @@ i {
     --c_icons: #B1B1B1;
 }
 
+.c_grey {
+    color: var(--c_icons);
+}
+
 .fs_10 {
     font-size: 10px;
 }

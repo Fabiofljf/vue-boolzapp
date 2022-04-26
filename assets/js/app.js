@@ -154,6 +154,11 @@ const app = new Vue({
                     }
                 ],
             }
-        ]
+        ],
+        methods: {
+            getname() {
+                console.log(this.contacts.name);
+            }
+        }
     }
 })
