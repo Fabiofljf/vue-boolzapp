@@ -13,5 +13,31 @@ img {
 
 /* UTILITY */
 
+:root {
+    --bg_desktopUp: #009688;
+    --bg_desktopDown: #DBDBD3;
+}
+
 
 /* MAIN */
+
+#desktopUp {
+    background-color: var(--bg_desktopUp);
+    height: 150px;
+}
+
+#desktopDown {
+    background-color: var(--bg_desktopDown);
+    height: calc(100vh - 150px);
+}
+
+#application {
+    width: 1440px;
+    height: 90vh;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    background-color: red;
+}
