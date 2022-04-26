@@ -25,7 +25,7 @@ i {
     --bg_columnDonwSx: white;
     --bg_columnDownDx: #F3EEEA;
     --bg_col-search: #FAFAFA;
-    --bg_messagge: #D5F9BA;
+    --bg_message: #D5F9BA;
     --bg_response: white;
     --c_icons: #B1B1B1;
 }
@@ -44,6 +44,10 @@ i {
 
 .h_100 {
     height: 100%;
+}
+
+.w_250 {
+    width: 250px;
 }
 
 
@@ -166,16 +170,19 @@ input {
 
 /* Working on second row, column Up dx - conversation */
 
-.messagge {
-    background-color: var(--bg_messagge);
+.message {
+    background-color: var(--bg_message);
     padding: 20px;
     border-radius: 10px;
+    margin-left: 490px;
 }
 
 .response {
     background-color: var(--bg_response);
     padding: 20px;
     border-radius: 10px;
+    display: flex;
+    justify-content: start;
 }
 
 

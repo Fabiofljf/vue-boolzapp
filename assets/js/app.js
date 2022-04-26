@@ -1,6 +1,7 @@
 const app = new Vue({
     el: '#app',
     data: {
+        index: 0,
         contacts: [{
                 name: 'Michele',
                 avatar: '_1',
@@ -155,10 +156,28 @@ const app = new Vue({
                 ],
             }
         ],
-        methods: {
-            getname() {
-                console.log(this.contacts.name);
-            }
+    },
+    methods: {
+        getNewIndexandConversation(index) {
+            //console.log('ciao');
+            this.index = index;
+        },
+        getconversation() {
+            console.log('ciao');
+            // const rowToConversation = document.getElementById('conversationUser');
+            // //console.log(rowToConversation);
+
+            // this.messages.forEach((message, index) => {
+            //     const markup = ` 
+            //     <div class="row d-flex flex-column">
+            //         <div class="col d-flex justify-content-end px-5 py-2">
+            //             <div :class="stutus == 'sent' ? 'messagge' : 'response' ">${this.message[index]}
+            //             </div>
+            //         </div>
+            //     </div>
+            //     `
+            //     rowToConversation.insertAdjacentHTML('beforeend', markup)
+            // })
         }
     }
 })

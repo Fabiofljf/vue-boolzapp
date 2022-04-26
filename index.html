@@ -98,16 +98,16 @@
                             </div>
                             <!-- /.columnDown - col-center sx -->
                             <div class="columnDonwSx overflow-auto">
-                                <div class="col d-flex border-bottom" v-for='(name, index) in contacts'>
+                                <div class="col d-flex border-bottom" v-for='(contact, index) in contacts' @click="getNewIndexandConversation(index)">
                                     <div class="col-2 card-avatar d-flex">
-                                        <img :src="'./assets/img/avatar' + contacts[index].avatar + '.jpg'" alt="User principale">
+                                        <img :src="'./assets/img/avatar' + contact.avatar + '.jpg'" alt="User principale">
                                     </div>
                                     <div class="col d-flex flex-column justify-content-center align-items-start">
-                                        <h6 class="d-flex align-items-center p-1 m-0">{{contacts[index].name}}</h6>
+                                        <h6 class="d-flex align-items-center p-1 m-0">{{contact.name}}</h6>
                                         <p class="fs_12 m-0 ms-1 c_grey">Ultimo messaggio inviato</p>
                                     </div>
                                 </div>
-
+                                <!-- /.Avatar messagge -->
                             </div>
                             <!-- /.columnDown - col-down sx -->
                         </div>
@@ -115,16 +115,10 @@
 
                         <div class="col">
                             <div class="columnUpDx overflow-auto">
-                                <div class="container">
+                                <div class="container" id="conversationUser">
                                     <div class="row d-flex flex-column">
-                                        <div class="col d-flex justify-content-end px-5 py-2">
-                                            <div class="messagge">Hai portato a spasso il cane?</div>
-                                        </div>
-                                        <div class="col d-flex justify-content-end px-5 py-2">
-                                            <div class="messagge">Ricordati di sistemare i panni</div>
-                                        </div>
-                                        <div class="col d-flex justify-content-start px-5 py-2">
-                                            <div class="response">Tutto fatto!</div>
+                                        <div class="col px-5 py-2" v-for='message in contacts[index].messages'>
+                                            <div class="w_250" :class="message.status == 'sent' ? 'message' : 'response' ">{{message.message}}</div>
                                         </div>
                                     </div>
                                 </div>
