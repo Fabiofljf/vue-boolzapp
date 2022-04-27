@@ -1,207 +1,193 @@
-/* COMMONS ROULES */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-img {
-    max-width: 100%;
-}
-
-i {
-    color: var(--c_icons);
-}
-
-li {
-    list-style-type: none;
-}
-
-
-/* UTILITY */
-
+ /* COMMONS ROULES */
+ 
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+ 
+ img {
+     max-width: 100%;
+ }
+ 
+ i {
+     color: var(--c_icons);
+ }
+ 
+ li {
+     list-style-type: none;
+ }
+ /* UTILITY */
+ 
  :root {
-    --bg_desktopUp: #009688;
-    --bg_desktopDown: #DBDBD3;
-    --bg_columnUp: #EAEAEA;
-    --bg_columnUpSx: #8EDAFC;
-    --bg_columnDonwSx: white;
-    --bg_columnDownDx: #F3EEEA;
-    --bg_col-search: #FAFAFA;
-    --bg_message: #D5F9BA;
-    --bg_response: white;
-    --c_icons: #B1B1B1;
-}
-
-.c_grey {
-    color: var(--c_icons);
-}
-
-.fs_10 {
-    font-size: 10px;
-}
-
-.fs_12 {
-    font-size: 12px;
-}
-
-.h_100 {
-    height: 100%;
-}
-
-.w_250 {
-    width: 250px;
-}
-
-
-/* MAIN */
-
-
-/* Desktop */
-
-#desktopUp {
-    background-color: var(--bg_desktopUp);
-    height: 150px;
-}
-
-#desktopDown {
-    background-color: var(--bg_desktopDown);
-    height: calc(100vh - 150px);
-}
-
-
-/* Application size */
-
-.application {
-    width: 1440px;
-    height: 90vh;
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-}
-
-.row {
-    height: 100%;
-    --bs-gutter-x: 0rem;
-}
-
-.columnUp {
-    height: 70px;
-    background-color: var(--bg_columnUp);
-}
-
-.columnDown {
-    height: calc(100% - 70px);
-}
-
-.columnUpSx {
-    height: 80px;
-    background-color: var(--bg_columnUpSx);
-}
-
-.columnDonwSx {
-    height: calc(100% - 80px);
-    background-color: var(--bg_columnDonwSx);
-}
-
-.columnUpDx {
-    height: calc(100% - 70px);
-    background-image: url('../img/mine.jpg');
-}
-
-.columnDonwDx {
-    height: 70px;
-    background-color: var(--bg_columnDonwSx);
-}
-
-
-/* Working in first row, column up sx - avatar and icons */
-
-.card-avatar {
-    width: 70px;
-    padding: 10px;
-}
-
-.card-avatar>img {
-    border-radius: 50%;
-}
-
-.col>i {
-    padding: 10px;
-}
-
-
-/* Working on second row, column up sx - bell incon */
-
-.bell {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.721);
-    padding: 15px;
-}
-
-
-/* Working on second row, column center sx - search input */
-
-.columnCenterSx {
-    background-color: var(--bg_col-search);
-    height: 50px;
-}
-
-.iconSearch {
-    width: 50px;
-    background-color: white;
-    border: none;
-}
-
-.searchBarr {
-    width: 100%;
-}
-
-#searchConversation {
-    width: 100%;
-    height: 30px;
-}
-
-input {
-    border: none;
-}
-
-
-/* Working on second row, column Up dx - conversation */
-
-.message {
-    background-color: var(--bg_message);
-    padding: 20px;
-    border-radius: 10px;
-    margin-left: 490px;
-}
-
-.response {
-    background-color: var(--bg_response);
-    padding: 10px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: start;
-}
-
-.nav-link {
-    color: #848484;
-}
-
-
-/* Working on second row, column Down dx - write messagge */
-
-.columnDonwDx {
-    background-color: var(--bg_columnDownDx);
-}
-
-.columnDonwDx .col>input {
-    width: 700px;
-    height: 50px;
-    border: none;
-}
+     --bg_desktopUp: #009688;
+     --bg_desktopDown: #DBDBD3;
+     --bg_columnUp: #EAEAEA;
+     --bg_columnUpSx: #8EDAFC;
+     --bg_columnDonwSx: white;
+     --bg_columnDownDx: #F3EEEA;
+     --bg_col-search: #FAFAFA;
+     --bg_message: #D5F9BA;
+     --bg_response: white;
+     --c_icons: #B1B1B1;
+ }
+ 
+ .c_grey {
+     color: var(--c_icons);
+ }
+ 
+ .fs_10 {
+     font-size: 10px;
+ }
+ 
+ .fs_12 {
+     font-size: 12px;
+ }
+ 
+ .h_100 {
+     height: 100%;
+ }
+ 
+ .w_250 {
+     width: 250px;
+ }
+ /* MAIN */
+ /* Desktop */
+ 
+ #desktopUp {
+     background-color: var(--bg_desktopUp);
+     height: 150px;
+ }
+ 
+ #desktopDown {
+     background-color: var(--bg_desktopDown);
+     height: calc(100vh - 150px);
+ }
+ /* Application size */
+ 
+ .application {
+     width: 1440px;
+     height: 90vh;
+     position: absolute;
+     top: 5%;
+     left: 50%;
+     transform: translateX(-50%);
+     z-index: 2;
+ }
+ 
+ .row {
+     height: 100%;
+     --bs-gutter-x: 0rem;
+ }
+ 
+ .columnUp {
+     height: 70px;
+     background-color: var(--bg_columnUp);
+ }
+ 
+ .columnDown {
+     height: calc(100% - 70px);
+ }
+ 
+ .columnUpSx {
+     height: 80px;
+     background-color: var(--bg_columnUpSx);
+ }
+ 
+ .columnDonwSx {
+     height: calc(100% - 80px);
+     background-color: var(--bg_columnDonwSx);
+ }
+ 
+ .columnUpDx {
+     height: calc(100% - 70px);
+     background-image: url('../img/mine.jpg');
+ }
+ 
+ .columnDonwDx {
+     height: 70px;
+     background-color: var(--bg_columnDonwSx);
+ }
+ /* Working in first row, column up sx - avatar and icons */
+ 
+ .card-avatar {
+     width: 70px;
+     padding: 10px;
+ }
+ 
+ .card-avatar>img {
+     border-radius: 50%;
+ }
+ 
+ .col>i {
+     padding: 10px;
+ }
+ /* Working on second row, column up sx - bell incon */
+ 
+ .bell {
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+     background-color: rgba(255, 255, 255, 0.721);
+     padding: 15px;
+ }
+ /* Working on second row, column center sx - search input */
+ 
+ .columnCenterSx {
+     background-color: var(--bg_col-search);
+     height: 50px;
+ }
+ 
+ .iconSearch {
+     width: 50px;
+     background-color: white;
+     border: none;
+ }
+ 
+ .searchBarr {
+     width: 100%;
+ }
+ 
+ #searchConversation {
+     width: 100%;
+     height: 30px;
+ }
+ 
+ input {
+     border: none;
+ }
+ /* Working on second row, column Up dx - conversation */
+ 
+ .message {
+     background-color: var(--bg_message);
+     padding: 20px;
+     border-radius: 10px;
+     margin-left: 490px;
+ }
+ 
+ .response {
+     background-color: var(--bg_response);
+     padding: 10px;
+     border-radius: 10px;
+     display: flex;
+     justify-content: start;
+ }
+ 
+ .nav-link {
+     color: #848484;
+ }
+ 
+ .remuve {
+     display: none;
+ }
+ /* Working on second row, column Down dx - write messagge */
+ 
+ .columnDonwDx {
+     background-color: var(--bg_columnDownDx);
+ }
+ 
+ .columnDonwDx .col>input {
+     width: 700px;
+     height: 50px;
+     border: none;
+ }

@@ -196,6 +196,10 @@ const app = new Vue({
                     }, 1000)
             }
         },
-
+        getRemuve() {
+            //console.log('ciao');
+            //console.log(this.contacts[this.i].visible);
+            this.contacts[this.i].visible = false
+        }
     }
 })
