@@ -93,12 +93,12 @@
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                 </button>
                                 <div class="searchBarr">
-                                    <input type="text" placeholder="Cerca o Inizia una nuova chat" name="searchConversation" id="searchConversation" @keyup.enter="getSearch" v-model="search">
+                                    <input type="text" placeholder="Cerca o Inizia una nuova chat" name="searchConversation" id="searchConversation" v-model="search">
                                 </div>
                             </div>
                             <!-- /.columnDown - col-center sx -->
                             <div class="columnDonwSx overflow-auto">
-                                <div class="col d-flex border-bottom" v-for='(contact, index) in contacts' @click="getNewIndexAndConversation(index)" v-if="contact.name.includes(search)">
+                                <div class="col d-flex border-bottom" v-for='(contact, index) in contacts' @click="getNewIndexAndConversation(index)" v-if="contact.name.toLowerCase().includes(search)">
                                     <div class="col-2 card-avatar d-flex">
                                         <img :src="'./assets/img/avatar' + contact.avatar + '.jpg'" alt="User principale">
                                     </div>
@@ -119,8 +119,23 @@
                                     <div class="row d-flex flex-column" id="conversationUser">
                                         <div class="col px-5 py-2" v-for='message in contacts[i].messages'>
                                             <div class="w_250 d-flex flex-column" :class="message.status == 'sent' ? 'message' : 'response' ">
-                                                <span>{{message.message}}</span>
-                                                <span class="fs_10 d-flex justify-content-end">{{message.date}}</span>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    {{message.message}}
+                                                    <button class="menu">
+                                                        <i class="fa-solid fa-chevron-down"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="fs_10 d-flex justify-content-end">{{message.date}}</div>
+                                                <div class="action_menu">
+                                                    <ul class="sub_menu ps-3 mb-0">
+                                                        <li>
+                                                            <a href="#">Message Info</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Delete</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
