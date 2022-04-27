@@ -4,6 +4,7 @@ const app = new Vue({
         //selectDate: dayjs().format('HH: mm'),
         i: 0,
         textUser: '',
+        search: '',
         contacts: [{
                 name: 'Michele',
                 avatar: '_1',
@@ -195,5 +196,9 @@ const app = new Vue({
                     }, 1000)
             }
         },
+        getSearch() {
+            console.log(this.search);
+            //this.search = '';
+        }
     }
 })

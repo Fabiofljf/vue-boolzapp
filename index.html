@@ -93,12 +93,12 @@
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                 </button>
                                 <div class="searchBarr">
-                                    <input type="text" placeholder="Cerca o Inizia una nuova chat" name="searchConversation" id="searchConversation" value="">
+                                    <input type="text" placeholder="Cerca o Inizia una nuova chat" name="searchConversation" id="searchConversation" @keyup.enter="getSearch" v-model="search">
                                 </div>
                             </div>
                             <!-- /.columnDown - col-center sx -->
                             <div class="columnDonwSx overflow-auto">
-                                <div class="col d-flex border-bottom" v-for='(contact, index) in contacts' @click="getNewIndexAndConversation(index)">
+                                <div class="col d-flex border-bottom" v-for='(contact, index) in contacts' @click="getNewIndexAndConversation(index)" v-if="contact.name.includes(search)">
                                     <div class="col-2 card-avatar d-flex">
                                         <img :src="'./assets/img/avatar' + contact.avatar + '.jpg'" alt="User principale">
                                     </div>
