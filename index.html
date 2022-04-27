@@ -120,7 +120,7 @@
                                         <div class="col px-5 py-2" v-for='message in contacts[i].messages'>
                                             <div class="w_250 d-flex flex-column" :class="message.status == 'sent' ? 'message' : 'response' ">
                                                 <span>{{message.message}}</span>
-                                                <span class="fs_10 d-flex justify-content-end">{{message.selectDate}}</span>
+                                                <span class="fs_10 d-flex justify-content-end">{{message.date}}</span>
                                             </div>
                                         </div>
                                     </div>

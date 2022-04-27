@@ -1,7 +1,7 @@
 const app = new Vue({
     el: '#app',
     data: {
-        selectDate: dayjs().format('HH: mm'),
+        //selectDate: dayjs().format('HH: mm'),
         i: 0,
         textUser: '',
         contacts: [{
@@ -181,14 +181,14 @@ const app = new Vue({
                 //this.newMessage[this.i].message = this.textUser // non posso inserire una nuova array perché il ciclo v-for non la legge poiché ha un altro nome. pusho direttamente il contenuto dentro
                 //console.log(this.newMessage[this.i].message);
                 this.contacts[this.i].messages.push({
-                        date: dayjs().format('HH: mm'),
+                        date: dayjs().format('HH:mm:ss'),
                         message: this.textUser,
                         status: 'sent'
                     }),
                     this.textUser = '',
                     setTimeout(() => {
                         this.contacts[this.i].messages.push({
-                            date: dayjs().format('HH: mm'),
+                            date: dayjs().format('HH:mm:ss'),
                             message: 'ok',
                             status: 'received'
                         })
