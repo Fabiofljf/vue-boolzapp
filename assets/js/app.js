@@ -1,7 +1,7 @@
 const app = new Vue({
     el: '#app',
     data: {
-        selectDate: '',
+        selectDate: dayjs().format('HH: mm'),
         i: 0,
         textUser: '',
         contacts: [{
@@ -169,28 +169,30 @@ const app = new Vue({
             //console.log('ciao');
             this.i = index;
         },
-        gethours(i) {
-            const hours = new Date("July 21, 1983 01:15:00")
-            let hour = hours.getHours()
-            hour = selectDate
+        // gethours(i) { // Aggiungo una nuova libreria in HTML Dayjs
+        //     const hours = new Date("July 21, 1983 01:15:00")
+        //     let hour = hours.getHours()
+        //     hour = selectDate
 
-        },
+        // },
         getMessage() {
             if (this.textUser.length !== 0) {
                 //console.log(this.textUser);
                 //this.newMessage[this.i].message = this.textUser // non posso inserire una nuova array perché il ciclo v-for non la legge poiché ha un altro nome. pusho direttamente il contenuto dentro
                 //console.log(this.newMessage[this.i].message);
                 this.contacts[this.i].messages.push({
-                        date: '10/01/2020 15:30:55',
+                        date: dayjs().format('HH: mm'),
                         message: this.textUser,
                         status: 'sent'
                     }),
                     this.textUser = '',
-                    this.contacts[this.i].messages.push({
-                        date: '10/01/2020 15:30:55',
-                        message: 'ok',
-                        status: 'received'
-                    })
+                    setTimeout(() => {
+                        this.contacts[this.i].messages.push({
+                            date: dayjs().format('HH: mm'),
+                            message: 'ok',
+                            status: 'received'
+                        })
+                    }, 1000)
             }
         },
     }
