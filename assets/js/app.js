@@ -181,15 +181,17 @@ const app = new Vue({
                 //this.newMessage[this.i].message = this.textUser // non posso inserire una nuova array perché il ciclo v-for non la legge poiché ha un altro nome. pusho direttamente il contenuto dentro
                 //console.log(this.newMessage[this.i].message);
                 this.contacts[this.i].messages.push({
-                    date: '10/01/2020 15:30:55',
-                    message: this.textUser,
-                    status: 'sent'
-                })
-
+                        date: '10/01/2020 15:30:55',
+                        message: this.textUser,
+                        status: 'sent'
+                    }),
+                    this.textUser = '',
+                    this.contacts[this.i].messages.push({
+                        date: '10/01/2020 15:30:55',
+                        message: 'ok',
+                        status: 'received'
+                    })
             }
         },
-        getResponse() {
-            setInterval
-        }
     }
 })
