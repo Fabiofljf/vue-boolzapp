@@ -3,6 +3,7 @@ const app = new Vue({
     data: {
         selectDate: '',
         i: 0,
+        textUser: '',
         contacts: [{
                 name: 'Michele',
                 avatar: '_1',
@@ -157,6 +158,11 @@ const app = new Vue({
                 ],
             }
         ],
+        newMessage: [{
+            date: '10/01/2020 15:30:55',
+            message: '',
+            status: 'sent'
+        }, ],
     },
     methods: {
         getNewIndexAndConversation(index) {
@@ -168,6 +174,14 @@ const app = new Vue({
             let hour = hours.getHours()
             hour = selectDate
 
+        },
+        getMessage(i) {
+            if (this.textUser.length !== 0) {
+                console.log(this.textUser);
+                this.newMessage[0].message = this.textUser
+                console.log(this.newMessage[0].message);
+                this.contacts[i].messages.push(this.newMessage[0].message)
+            }
         }
     }
 })

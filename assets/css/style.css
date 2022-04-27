@@ -151,7 +151,7 @@ i {
 .iconSearch {
     width: 50px;
     background-color: white;
-    border: 1px solid lightgrey;
+    border: none;
     padding: 0px 15px;
 }
 
@@ -164,7 +164,7 @@ i {
 }
 
 input {
-    border-color: lightgray;
+    border: none;
 }
 
 
@@ -195,4 +195,5 @@ input {
 .columnDonwDx .col>input {
     width: 700px;
     height: 50px;
+    border: none;
 }

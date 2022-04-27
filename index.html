@@ -133,7 +133,7 @@
                                     <i class="fa-regular fa-face-smile fa-lg"></i>
                                 </div>
                                 <div class="col">
-                                    <input class="rounded-3" type="text" placeholder="Scrivi un messaggio">
+                                    <input class="rounded-3" type="text" placeholder="Scrivi un messaggio" v-model="textUser" @keyup.enter="getMessage">
                                 </div>
                                 <div class="col-1 d-flex justify-content-center">
                                     <i class="fa-solid fa-microphone fa-lg"></i>
