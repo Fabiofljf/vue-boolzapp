@@ -118,7 +118,7 @@
                                 <div class="container">
                                     <div class="row d-flex flex-column" id="conversationUser">
                                         <div class="col px-5 py-2" v-for='message in contacts[i].messages'>
-                                            <div class="w_250 d-flex flex-column" :class="message.status == 'sent' ? 'message' : 'response' ">
+                                            <div class="w_250 d-flex flex-column position_relative" :class="message.status == 'sent' ? 'message' : 'response' ">
                                                 <div class="d-flex justify-content-between align-items-center">
                                                     {{message.message}}
                                                     <button class="menu">
