@@ -54,7 +54,7 @@
                                 </div>
                                 <div class="col d-flex flex-column justify-content-center align-items-start">
                                     <h6 class="d-flex align-items-center p-1 m-0">{{contacts[i].name}}</h6>
-                                    <p class="fs_10 m-0">{{contacts[i].date}}</p>
+                                    <p class="fs_10 m-0">Ultimo accesso effettuato: {{contacts[i].messages[i].date}}</p>
                                 </div>
                                 <!-- /.card-avatar-->
                             </div>
@@ -118,24 +118,24 @@
                                 <div class="container">
                                     <div class="row d-flex flex-column" id="conversationUser">
                                         <div class="col px-5 py-2" v-for='message in contacts[i].messages'>
-                                            <div class="w_250 d-flex flex-column position_relative" :class="message.status == 'sent' ? 'message' : 'response' ">
+                                            <div class="w_250 d-flex flex-column" :class="message.status == 'sent' ? 'message' : 'response' ">
                                                 <div class="d-flex justify-content-between align-items-center">
                                                     {{message.message}}
-                                                    <button class="menu">
-                                                        <i class="fa-solid fa-chevron-down"></i>
-                                                    </button>
-                                                </div>
-                                                <div class="fs_10 d-flex justify-content-end">{{message.date}}</div>
-                                                <div class="action_menu">
-                                                    <ul class="sub_menu ps-3 mb-0">
-                                                        <li>
-                                                            <a href="#">Message Info</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">Delete</a>
+                                                    <ul class="ps-0">
+                                                        <li class="nav-item dropdown">
+                                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+                                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                                <li><a class="dropdown-item" href="#">Message Info</a></li>
+                                                                <li>
+                                                                    <a class="dropdown-item" href="#">
+                                                                        Delete
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
                                                         </li>
                                                     </ul>
                                                 </div>
+                                                <div class="fs_10 d-flex justify-content-end">{{message.date.slice(-8, -3)}}</div>
                                             </div>
                                         </div>
                                     </div>

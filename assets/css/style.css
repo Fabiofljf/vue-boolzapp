@@ -21,7 +21,7 @@ li {
 
 /* UTILITY */
 
-:root {
+ :root {
     --bg_desktopUp: #009688;
     --bg_desktopDown: #DBDBD3;
     --bg_columnUp: #EAEAEA;
@@ -174,10 +174,6 @@ input {
 
 /* Working on second row, column Up dx - conversation */
 
-.position_relative {
-    position: relative;
-}
-
 .message {
     background-color: var(--bg_message);
     padding: 20px;
@@ -187,33 +183,14 @@ input {
 
 .response {
     background-color: var(--bg_response);
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     display: flex;
     justify-content: start;
 }
 
-.menu {
-    border: none;
-    background-color: transparent;
-}
-
-.action_menu {
-    width: 150px;
-    height: 55px;
-    background-color: var(--bg_col-search);
-    position: absolute;
-    top: 50px;
-    right: 0px;
-}
-
-.menu:hover .action_menu {
-    background-color: red;
-}
-
-.sub_menu a {
-    color: rgb(46, 45, 45);
-    text-decoration: none;
+.nav-link {
+    color: #848484;
 }
 
 
