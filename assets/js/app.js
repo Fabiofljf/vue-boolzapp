@@ -158,11 +158,11 @@ const app = new Vue({
                 ],
             }
         ],
-        newMessage: [{
-            date: '10/01/2020 15:30:55',
-            message: '',
-            status: 'sent'
-        }, ],
+        // newMessage: [{
+        //     date: '10/01/2020 15:30:55',
+        //     message: '',
+        //     status: 'sent'
+        // }, ],
     },
     methods: {
         getNewIndexAndConversation(index) {
@@ -175,13 +175,21 @@ const app = new Vue({
             hour = selectDate
 
         },
-        getMessage(i) {
+        getMessage() {
             if (this.textUser.length !== 0) {
-                console.log(this.textUser);
-                this.newMessage[0].message = this.textUser
-                console.log(this.newMessage[0].message);
-                this.contacts[i].messages.push(this.newMessage[0].message)
+                //console.log(this.textUser);
+                //this.newMessage[this.i].message = this.textUser // non posso inserire una nuova array perché il ciclo v-for non la legge poiché ha un altro nome. pusho direttamente il contenuto dentro
+                //console.log(this.newMessage[this.i].message);
+                this.contacts[this.i].messages.push({
+                    date: '10/01/2020 15:30:55',
+                    message: this.textUser,
+                    status: 'sent'
+                })
+
             }
+        },
+        getResponse() {
+            setInterval
         }
     }
 })
