@@ -5,6 +5,7 @@ const app = new Vue({
         i: 0,
         textUser: '',
         search: '',
+        sms: '',
         contacts: [{
                 name: 'Michele',
                 avatar: '_1',
@@ -159,11 +160,7 @@ const app = new Vue({
                 ],
             }
         ],
-        // newMessage: [{
-        //     date: '10/01/2020 15:30:55',
-        //     message: '',
-        //     status: 'sent'
-        // }, ],
+        randomMessage: ['Dai che ce la puoi fare', 'A volte mi sorprendo da solo', 'Odio la struttura dati', 'Cercherò di sorprenderti'],
     },
     methods: {
         getNewIndexAndConversation(index) {
@@ -182,19 +179,25 @@ const app = new Vue({
                 //this.newMessage[this.i].message = this.textUser // non posso inserire una nuova array perché il ciclo v-for non la legge poiché ha un altro nome. pusho direttamente il contenuto dentro
                 //console.log(this.newMessage[this.i].message);
                 this.contacts[this.i].messages.push({
+                    date: dayjs().format('HH:mm'),
+                    message: this.textUser,
+                    status: 'sent'
+                })
+                this.textUser = '';
+                this.getRandomMessage()
+                setTimeout(() => {
+                    this.contacts[this.i].messages.push({
                         date: dayjs().format('HH:mm'),
-                        message: this.textUser,
-                        status: 'sent'
-                    }),
-                    this.textUser = '',
-                    setTimeout(() => {
-                        this.contacts[this.i].messages.push({
-                            date: dayjs().format('HH:mm'),
-                            message: 'ok',
-                            status: 'received'
-                        })
-                    }, 1000)
+                        message: this.sms,
+                        status: 'received'
+                    })
+                }, 1000)
             }
+        },
+        getRandomMessage() {
+            const messageRandom = this.randomMessage[Math.floor(Math.random() * this.randomMessage.length)];
+            this.sms = messageRandom
+            console.log(this.sms);
         },
         deleteMessage(index) {
             //console.log(index);
