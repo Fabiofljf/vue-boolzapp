@@ -6,6 +6,7 @@ const app = new Vue({
         textUser: '',
         search: '',
         sms: '',
+        messageToView: '',
         contacts: [{
                 name: 'Michele',
                 avatar: '_1',
@@ -191,7 +192,15 @@ const app = new Vue({
                         message: this.sms,
                         status: 'received'
                     })
+                    this.messageToView = 'Il pc sta scrivendo...'
                 }, 1000)
+                setTimeout(() => {
+                    this.messageToView = 'Online'
+                }, 2000)
+                setTimeout(() => {
+                    this.messageToView = `Ultimo accesso alle:${dayjs().format('HH:mm')}`
+                }, 4000)
+
             }
         },
         getRandomMessage() {
