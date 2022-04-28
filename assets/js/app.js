@@ -200,6 +200,14 @@ const app = new Vue({
             //console.log('ciao');
             //console.log(this.contacts[this.i].visible);
             this.contacts[this.i].visible = false
+        },
+        getRemuveMessage() {
+            //console.log('ciao');
+            console.log(this.contacts[this.i].messages[this.i].message);
+            // let singleMessage = this.contacts[this.i].messages[this.i].message
+            // console.log(singleMessage);
+            // singleMessage = 'Message Delete'
+
         }
     }
 })
