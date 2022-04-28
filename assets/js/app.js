@@ -196,18 +196,19 @@ const app = new Vue({
                     }, 1000)
             }
         },
-        getRemuve() {
-            //console.log('ciao');
-            //console.log(this.contacts[this.i].visible);
-            this.contacts[this.i].visible = false
-        },
         getRemuveMessage() {
             //console.log('ciao');
             console.log(this.contacts[this.i].messages[this.i].message);
             // let singleMessage = this.contacts[this.i].messages[this.i].message
             // console.log(singleMessage);
             // singleMessage = 'Message Delete'
+            //this.contacts[this.i].messages.splice(singleMessage, 0)
 
-        }
+        },
+        getRemuve() {
+            //console.log('ciao');
+            //console.log(this.contacts[this.i].visible);
+            this.contacts[this.i].visible = false
+        },
     }
 })
