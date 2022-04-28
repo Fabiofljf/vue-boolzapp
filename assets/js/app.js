@@ -198,6 +198,7 @@ const app = new Vue({
         },
         getRemuveMessage() {
             //console.log('ciao');
+            console.log(this.contacts[this.i].messages);
             console.log(this.contacts[this.i].messages[this.i].message);
             // let singleMessage = this.contacts[this.i].messages[this.i].message
             // console.log(singleMessage);
