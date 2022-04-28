@@ -63,7 +63,15 @@
                             <div class="col d-flex align-items-center justify-content-end">
                                 <i class="fa-solid fa-magnifying-glass fa-lg"></i>
                                 <i class="fa-solid fa-paperclip fa-lg"></i>
-                                <i class="fa-solid fa-ellipsis-vertical fa-lg"></i>
+                                <div class="dropdown">
+                                    <button class="btn " type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa-solid fa-ellipsis-vertical fa-lg"></i>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                        <li><button class="dropdown-item" type="button" @click="deleteConversation">Elimina messaggi</button></li>
+                                        <li><button class="dropdown-item" type="button">Elimina chat</button></li>
+                                    </ul>
+                                </div>
                             </div>
                             <!-- /.col icons-->
                         </div>
@@ -131,11 +139,11 @@
                                                                 <li><a class="dropdown-item" href="#">Message Info</a></li>
                                                                 <li>
                                                                     <a class="dropdown-item" href="#" @click="deleteMessage(index)">
-                                                                        Delete messagge
+                                                                        Delete message
                                                                     </a>
                                                                 </li>
                                                                 <li>
-                                                                    <a class="dropdown-item" href="#" @click="getRemuve">
+                                                                    <a class="dropdown-item" href="#" @click="deleteConversation()">
                                                                         Delete conversation
                                                                     </a>
                                                                 </li>

@@ -6,7 +6,7 @@ const app = new Vue({
         textUser: '',
         search: '',
         sms: '',
-        messageToView: '',
+        messageToView: 'Ultimo accesso oggi, alle 12:00',
         contacts: [{
                 name: 'Michele',
                 avatar: '_1',
@@ -216,10 +216,17 @@ const app = new Vue({
             array.splice(index, 1)
 
         },
-        getRemuve() {
+        deleteConversation() {
             //console.log('ciao');
-            //console.log(this.contacts[this.i].visible);
-            this.contacts[this.i].visible = false
+            console.log(this.contacts[this.i]);
+            console.log(this.contacts[this.i].visible);
+            console.log(this.contacts[this.i].messages.length);
+            console.log(this.contacts[this.i].messages);
+            if (this.contacts[this.i].messages.length = 0) {
+                this.contacts[this.i].visible = true
+            } else {
+                this.contacts[this.i].visible = false
+            }
         },
     }
 })
