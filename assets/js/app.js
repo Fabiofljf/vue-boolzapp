@@ -223,9 +223,9 @@ const app = new Vue({
             console.log(this.contacts[this.i].messages.length);
             console.log(this.contacts[this.i].messages);
             if (this.contacts[this.i].messages.length = 0) {
-                this.contacts[this.i].visible = true
-            } else {
                 this.contacts[this.i].visible = false
+            } else {
+                this.contacts[this.i].visible = true
             }
         },
     }
