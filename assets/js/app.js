@@ -228,10 +228,8 @@ const app = new Vue({
                 this.contacts[this.i].visible = true
             }
         },
-        deleteAllChat(contact, index) {
-            console.log(contact);
-            console.log(index);
-            //this.contacts[this.i].splice(index, 1)
+        deleteAllChat() {
+            this.contacts.splice(this.i, 1)
         }
     }
 })
