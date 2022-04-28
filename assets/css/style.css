@@ -157,6 +157,11 @@
  input {
      border: none;
  }
+ /* Working on second row, column down sx - chat */
+ 
+ .display {
+     display: none !important;
+ }
  /* Working on second row, column Up dx - conversation */
  
  .message {

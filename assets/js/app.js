@@ -161,7 +161,7 @@ const app = new Vue({
                 ],
             }
         ],
-        randomMessage: ['Dai che ce la puoi fare', 'A volte mi sorprendo da solo', 'Odio la struttura dati', 'Cercherò di sorprenderti'],
+        randomMessage: ['Dai che ce la puoi fare', 'A volte mi sorprendo da solo', 'Sempre più infognato', 'Cercherò di sorprenderti'],
     },
     methods: {
         getNewIndexAndConversation(index) {
@@ -206,7 +206,7 @@ const app = new Vue({
         getRandomMessage() {
             const messageRandom = this.randomMessage[Math.floor(Math.random() * this.randomMessage.length)];
             this.sms = messageRandom
-            console.log(this.sms);
+                //console.log(this.sms);
         },
         deleteMessage(index) {
             //console.log(index);
@@ -218,15 +218,20 @@ const app = new Vue({
         },
         deleteConversation() {
             //console.log('ciao');
-            console.log(this.contacts[this.i]);
-            console.log(this.contacts[this.i].visible);
-            console.log(this.contacts[this.i].messages.length);
-            console.log(this.contacts[this.i].messages);
+            //console.log(this.contacts[this.i]);
+            //console.log(this.contacts[this.i].visible);
+            //console.log(this.contacts[this.i].messages.length);
+            //console.log(this.contacts[this.i].messages);
             if (this.contacts[this.i].messages.length = 0) {
                 this.contacts[this.i].visible = false
             } else {
                 this.contacts[this.i].visible = true
             }
         },
+        deleteAllChat(contact, index) {
+            console.log(contact);
+            console.log(index);
+            //this.contacts[this.i].splice(index, 1)
+        }
     }
 })
